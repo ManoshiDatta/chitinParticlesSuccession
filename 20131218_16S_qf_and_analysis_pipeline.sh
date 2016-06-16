@@ -65,13 +65,12 @@ OTUPERCENT=0.97
 
 # Output path
 OUTPUTPATH="${FILE_PATH}"/output
-<<COMMENT
+
 ###################################################################################################################################################
 # Demultiplex by forward barcode (separate my samples from everyone else's)
 echo "Demultiplexing samples by forward barcode"
 
 python "${PYTHONPATH}"/demultiplex_by_fwd_barcode_2.py -f "${ILLFILE_F}" -r "${ILLFILE_R}" -fo "${OUTPUTPATH}"/${SAMPLEID}_1.fastq -ro "${OUTPUTPATH}"/${SAMPLEID}_2.fastq -b ${FWDBARCODE}
-COMMENT
 ###################################################################################################################################################
 # Merge paired-end reads
 echo "Merging paired-end reads"
